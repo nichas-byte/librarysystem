@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,4 +25,9 @@ Route::get('/index',[AdminController::class,'index'])->name('index');
 Route::post('/index',[AdminController::class,'bookStore'])->name('book.store');
 
 Route::get('/show/{id}', [AdminController::class,'show'])->name('book.show');
+//User
+Route::get('adduser',[UserController::class,'index'])->name('user.form');
 
+Route::post('/adduser',[UserController::class,'store'])->name('user.store');
+
+Route::get('/show/{id}', [UserController::class,'show'])->name('user.show');

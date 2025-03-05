@@ -100,7 +100,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="../../dist/assets/img/user1-128x128.jpg"
+                        src="{{asset('adminassets/dist')}}/img/user1-128x128.jpg"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -126,7 +126,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="../../dist/assets/img/user8-128x128.jpg"
+                        src="{{asset('adminassets/dist')}}/assets/img/user8-128x128.jpg"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -152,7 +152,7 @@
                   <div class="d-flex">
                     <div class="flex-shrink-0">
                       <img
-                        src="../../dist/assets/img/user3-128x128.jpg"
+                        src="{{asset('adminassets/dist')}}/assets/img/user3-128x128.jpg"
                         alt="User Avatar"
                         class="img-size-50 rounded-circle me-3"
                       />
@@ -217,7 +217,7 @@
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img
-                  src="../../dist/assets/img/user2-160x160.jpg"
+                  src="{{asset('adminassets/dist')}}/assets/img/user2-160x160.jpg"
                   class="user-image rounded-circle shadow"
                   alt="User Image"
                 />
@@ -227,7 +227,7 @@
                 <!--begin::User Image-->
                 <li class="user-header text-bg-primary">
                   <img
-                    src="../../dist/assets/img/user2-160x160.jpg"
+                    src="{{asset('adminassets/dist')}}/assets/img/user2-160x160.jpg"
                     class="rounded-circle shadow"
                     alt="User Image"
                   />
@@ -271,7 +271,7 @@
           <a href="./index.html" class="brand-link">
             <!--begin::Brand Image-->
             <img
-              src="../../dist/assets/img/AdminLTELogo.png"
+              src="{{asset('adminassets/dist')}}/assets/img/AdminLTELogo.png"
               alt="AdminLTE Logo"
               class="brand-image opacity-75 shadow"
             />
@@ -812,6 +812,101 @@
                
                 <!--end::Horizontal Form-->
               </div>
+               <!--end::Input Group-->
+                <!--begin::Horizontal Form-->
+                <div class="card card-warning card-outline mb-4">
+                  <!--begin::Header-->
+                  <div class="card-header"><div class="card-title">Add User Form</div></div>
+                  <!--end::Header-->
+                  <!--begin::Form-->
+                  <form action="{{route('user.store')}}" method="post">
+                  @csrf
+                 <!--begin::Body-->
+                    <div class="card-body">
+                    <div class="row mb-3">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Name:</label>
+                        <div class="col-sm-10">
+                          <input type="email" name="fullname" class="form-control" id="inputEmail3" />
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputEmail3" />
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label">Mobile No.</label>
+                        <div class="col-sm-10">
+                          <input type="text" name="mobileNo" class="form-control"  />
+                        </div>
+                      </div> 
+                      <select class="form-select" aria-label="Default select example">
+                      <option selected>Member Type</option>
+                      <option value="basic">Basic</option>
+                      <option value="premium">Premium</option>
+                      <option value="elite">Elite</option>
+                    </select>
+                      <!-- <fieldset class="row mb-3">
+                        <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
+                        <div class="col-sm-10">
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gridRadios"
+                              id="gridRadios1"
+                              value="option1"
+                              checked
+                            />
+                            <label class="form-check-label" for="gridRadios1"> First radio </label>
+                          </div>
+                          <div class="form-check">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gridRadios"
+                              id="gridRadios2"
+                              value="option2"
+                            />
+                            <label class="form-check-label" for="gridRadios2"> Second radio </label>
+                          </div>
+                          <div class="form-check disabled">
+                            <input
+                              class="form-check-input"
+                              type="radio"
+                              name="gridRadios"
+                              id="gridRadios3"
+                              value="option3"
+                              disabled
+                            />
+                            <label class="form-check-label" for="gridRadios3">
+                              Third disabled radio
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset> -->
+                      <!-- <div class="row mb-3">
+                        <div class="col-sm-10 offset-sm-2">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck1" />
+                            <label class="form-check-label" for="gridCheck1">
+                              Example checkbox
+                            </label>
+                          </div>
+                        </div>
+                      </div> -->
+                    </div>
+                    <!--end::Body-->
+                    <!--begin::Footer-->
+                    <div class="card-footer">
+                      <button type="submit" class="btn btn-warning">Sign in</button>
+                      <button type="submit" class="btn float-end">Cancel</button>
+                    </div>
+                    <!--end::Footer-->
+                  </form>
+                  <!--end::Form-->
+                </div>
                 <!--begin::Small Box Widget 1-->
                 <!-- <div class="small-box text-bg-primary">
                   <div class="inner">

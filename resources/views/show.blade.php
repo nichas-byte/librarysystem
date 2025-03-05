@@ -47,7 +47,7 @@
                   </div>
                   <!-- /.card-header -->
                      
-                        < tr class="align-middle">
+                        <!-- < tr class="align-middle">
                           <td>2.</td>
                           <td>Clean database</td>
                           <td>
@@ -56,7 +56,7 @@
                             </div>
                           </td>
                           <td><span class="badge text-bg-warning">70%</span></td>
-                        </tr>
+                        </tr> -->
                         <tr class="align-middle">
                           <td>3.</td>
                           <td>Cron job running</td>

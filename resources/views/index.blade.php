@@ -58,7 +58,7 @@
       integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4="
       crossorigin="anonymous"
     />
-  </head>
+  </head> 
   <!--end::Head-->
   <!--begin::Body-->
   <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
@@ -745,7 +745,7 @@
                 <!--begin::Quick Example-->
                 <div class="card card-primary card-outline mb-4">
                   <!--begin::Header-->
-                  <div class="card-header"><div class="card-title">Quick Example</div></div>
+                  <div class="card-header"><div class="card-title">Add Book Form</div></div>
                   <!--end::Header-->
                   <!--begin::Form-->
                   <form method="post" action="{{route('book.store')}}">
@@ -771,7 +771,7 @@
                           class="form-control"
                           id="title"
                           aria-describedby="emailHelp"
-                        />
+                        /> 
                         
                       </div>
                       

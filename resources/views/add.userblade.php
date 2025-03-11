@@ -1,3 +1,6 @@
+ @extends('layout.main')
+ @section('main-section')
+
  <!--end::Input Group-->
                 <!--begin::Horizontal Form-->
                 <div class="card card-warning card-outline mb-4">
@@ -87,3 +90,4 @@
                   </form>
                   <!--end::Form-->
                 </div>
+                @endsection

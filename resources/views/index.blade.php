@@ -745,11 +745,7 @@
                 <!--begin::Quick Example-->
                 <div class="card card-primary card-outline mb-4">
                   <!--begin::Header-->
-<<<<<<< HEAD
-                  <div class="card-header"><div class="card-title">Add Book Form</div></div>
-=======
                   <div class="card-header"><div class="card-title">Add Book form</div></div>
->>>>>>> 9bd1c4ae858bdc24d4e5baf289bf5dda42cd75ae
                   <!--end::Header-->
                   <!--begin::Form-->
                   <form method="post" action="{{route('book.store')}}">

@@ -9,7 +9,9 @@ class AdminController extends Controller
 {
     
     public function index(){
-        return view('index');
+        // return view('index');
+        // return view('book-form');
+        return view('sachin-form');
     }
 
     public function bookStore(Request $request){

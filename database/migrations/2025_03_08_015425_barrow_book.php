@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('borrowBook', function (Blueprint $table) {
             $table->id();
-            $table->user_id();
-            $table->book_id();
+            $table->bigInteger('user_id');
+            $table->bigInteger('book_id');
             $table->string('fullname');
             $table->date('dueDate')->format('d/m/Y');
             $table->date('barrowDate')->format('d/m/Y');

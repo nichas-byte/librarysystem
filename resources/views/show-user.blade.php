@@ -14,9 +14,9 @@
                       <thead>
                         <tr>
                           <th style="width: 10px">#</th>
-                          <th>Book Name</th>
-                          <th>Author Name</th>
-                          <th>ISBN</th>                  
+                          <th>User Name</th>
+                          <th>User Email</th>
+                          <th>Mobile No</th>                  
                           <th>Action</th>
                         </tr>
                       </thead>
@@ -24,14 +24,14 @@
                         @php
                         $i=1;
                         @endphp
-                        @foreach($book as  $booklist)
+                        @foreach($user as  $userlist)
                        
                         <tr class="align-middle">
                           <td>{{ $i++ }}</td>
-                          <td>{{$booklist->title}}</td>
-                          <td>{{$booklist->authorName}}</td>
-                          <td>{{$booklist->isbn}}</td>
-                          <td><button data-id="{{$booklist->id}}" id="delete_book" class="btn btn-danger">Delete</button></td>
+                          <td>{{$userlist->fullname}}</td>
+                          <td>{{$userlist->email }}</td>
+                          <td>{{$userlist->mobileNo}}</td>
+                          <!-- <td><button data-id="{{$userlist->id}}" id="delete_book" class="btn btn-danger">Delete</button></td> -->
                        
                         </tr>
                         @endforeach
@@ -59,28 +59,5 @@
           </div>
           <!--end::Container-->
         </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script>
-$(document).ready(function() {
-  $(document).on('click', '#delete_book', function() {
-        let id = $(this).data('id');
-        // alert(id);
-
-        $.ajax({
-            url: `/book-delete/${id}`,
-            type: 'DELETE',
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') // Include CSRF token
-            },
-            success: function(response) {
-                console.log(response);
-                table.ajax.reload();
-            },
-            error: function(xhr) {
-                console.error(xhr.responseText);
-            }
-        });
-    });
-});
-</script>
+    
 @endsection

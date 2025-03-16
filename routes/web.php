@@ -22,12 +22,17 @@ Route::get('/', function () {
 
 Route::get('/index',[AdminController::class,'index'])->name('index');
   
+Route::get('add-book',[AdminController::class,'create'])->name('book.create');
 Route::post('/index',[AdminController::class,'bookStore'])->name('book.store');
 
-Route::get('/show/{id}', [AdminController::class,'show'])->name('book.show');
+Route::get('/show', [AdminController::class,'show'])->name('book.show');
+
+Route::delete('book-delete/{id}',[AdminController::class,'deleteBook']);
 //User
-Route::get('adduser',[UserController::class,'index'])->name('user.form');
+Route::get('add-user',[UserController::class,'create'])->name('user.create');
+
+// Route::get('adduser',[UserController::class,'index'])->name('user.form');
 
 Route::post('/adduser',[UserController::class,'store'])->name('user.store');
 
-Route::get('/show/{id}', [UserController::class,'show'])->name('user.show');
+Route::get('/show-user', [UserController::class,'showuser'])->name('user.show');

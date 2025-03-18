@@ -11,23 +11,23 @@ class UserController extends Controller
         return view('showuser');
     }
     public function store(Request $request){
-        // dd($request);
         $request->validate([
-            'fullname'=>'required',
-            'email'=>'required|unique:user',
-            'mobileNo'=>'required',
-        ]); 
+            'fullname'  => 'required|string|max:255',
+            'email'     => 'required|email|unique:users,email',
+            'mobileNo'  => 'required|unique:user,mobileNo',
+            'membertype'=> 'nullable|string'
+        ]);
+    
         $user = new User();
-        $user->fullname = $request->fullname;
-        $user->email = $request->email;
-        $user->mobileNo = $request->mobileNo;
+        $user->fullname   = $request->fullname;
+        $user->email      = $request->email;
+        $user->mobileNo   = $request->mobileNo;
+        $user->membertype = $request->membertype ?? 'regular'; // Default value if null
         $user->save();
-        // User::create(($request->all()));
-       
-
-        return redirect()->route('show.user')->with('success', 'User add successfully');
+        return redirect()->route('user.show')->with('success', 'User add successfully');
 
     }
+    
     public function showuser(){
 
         $user = User::get();

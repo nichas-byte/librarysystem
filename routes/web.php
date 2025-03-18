@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,3 +37,5 @@ Route::get('add-user',[UserController::class,'create'])->name('user.create');
 Route::post('/adduser',[UserController::class,'store'])->name('user.store');
 
 Route::get('/show-user', [UserController::class,'showuser'])->name('user.show');
+
+Route::get('dashboard',[DashboardController::class,'dashboard'])->name('dashboard');

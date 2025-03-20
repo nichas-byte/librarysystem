@@ -38,4 +38,4 @@ Route::post('/adduser',[UserController::class,'store'])->name('user.store');
 
 Route::get('/show-user', [UserController::class,'showuser'])->name('user.show');
 
-Route::get('dashboard',[DashboardController::class,'dashboard'])->name('dashboard');
+Route::get('/dashboard',[DashboardController::class,'index'])->name('dashboard');
